@@ -1,0 +1,13 @@
+weight = int(input("enter weight in pounds : ")) / 2.205
+height = int(input("enter height in inches: ")) / 39.3701
+bmi = weight / (height**2)
+print(bmi)
+bmi = weight_kg / (height_meters ** 2)
+
+print("Your BMI is:", bmi)
+
+# Check if BMI is in a healthy range
+if 18.5 <= bmi <= 24.9:
+    print("Your BMI is considered healthy.")
+else:
+    print("Your BMI is not in the healthy range.")
