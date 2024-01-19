@@ -1,0 +1,14 @@
+def calculate_future_value(principal, interest_rate, time):
+    rate = interest_rate / 100
+
+    future_value = principal * (1 + rate) ** time
+
+    return future_value
+
+principal_amount = int(input("Enter the principal amount: "))
+
+annual_interest_rate = float(input("Enter the annual interest rate (in percentage): "))
+years = int(input("Enter the time period in years: "))
+
+result = calculate_future_value(principal_amount, annual_interest_rate, years)
+print(f"The future value after {years} years will be: {result:.2f}")
