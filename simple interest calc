@@ -1,0 +1,11 @@
+principal = int(input('Enter the principal amount: '))
+interest_rate = float(input('Enter the interest rate (in percentage): ')) / 100
+years = int(input('Enter the number of years: '))
+months = int(input('Enter the number of months: '))
+
+time = years + months / 12
+
+simple_interest = principal * interest_rate * time
+
+rounded_interest = round(simple_interest, 2)
+print(f"{rounded_interest:.2f}")
