@@ -1,0 +1,25 @@
+def ly_to_meters(ly):
+    speed_light = 299792458
+    secs_year = 60 * 60 * 24 * 365
+    meters = speed_light * secs_year * ly
+    return meters
+
+def calc_distance(x, y, z):
+    earth_coords = (0, 0, 0)
+    dist = ((x - earth_coords[0])**2 + (y - earth_coords[1])**2 + (z - earth_coords[2])**2) ** 0.5
+    return dist
+def get_input(prompt):
+    value = float(input(prompt))
+    return value
+dist_from_earth_ly = get_input("Enter distance from Earth in light years: ")
+
+dist_from_earth_meters = ly_to_meters(dist_from_earth_ly)
+
+x_coord = get_input("Enter x-coordinate of location: ")
+y_coord = get_input("Enter y-coordinate of location: ")
+z_coord = get_input("Enter z-coordinate of location: ")
+
+distance_to_location = calc_distance(x_coord, y_coord, z_coord)
+
+print(f"Distance from Earth to location: {distance_to_location} units")
+print(f"Distance from Earth in light years to meters: {dist_from_earth_meters} meters")
